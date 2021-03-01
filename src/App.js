@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MyCarousel from "./Components/Carousel/Carousel";
+import MyContainer from "./Components/MainContainer/Container";
+import MyNavbar from "./Components/Navbar/Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            {/* Navigation bar */}
+            <MyNavbar></MyNavbar>
+
+            {/* Carousel */}
+            <MyCarousel></MyCarousel>
+
+            {/* Main content including team and players */}
+            <MyContainer></MyContainer>
+        </div>
+    );
 }
 
 export default App;
