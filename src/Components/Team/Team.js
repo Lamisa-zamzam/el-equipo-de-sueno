@@ -25,13 +25,15 @@ const Team = (props) => {
             <hr />
             {team.map((player) => {
                 // Destructuring the object "player"
-                const { id, img, name, position } = player;
+                const { id, img, name, position, salary } = player;
                 return (
                     <div className="selected-players">
                         <img src={img} alt="" style={imgStyle} />
                         <div>
                             <h6 key={id}>{name}</h6>
-                            <p key={id}>{position}</p>
+                            <p key={id}>
+                                {position}, salary: {salary} USD
+                            </p>
                         </div>
                     </div>
                 );
